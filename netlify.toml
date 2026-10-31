@@ -2,6 +2,8 @@
   base = "client"
   publish = "dist"
   command = "npm run build"
+  [build.environment]
+    VITE_API_URL = "https://techfest-api-d6ku.onrender.com"
 
 [[redirects]]
   from = "/*"
