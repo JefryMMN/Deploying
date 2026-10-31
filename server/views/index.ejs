@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= title %></title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+    }
+    .container {
+      text-align: center;
+      padding: 2rem;
+    }
+    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    p  { font-size: 1.1rem; color: #ccc; }
+    code {
+      background: rgba(255,255,255,0.1);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+    table {
+      margin: 2rem auto;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    th, td {
+      padding: 8px 16px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    th { background: rgba(255,255,255,0.1); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 <%= title %></h1>
+    <p>The backend server is running.</p>
+    <p>Database Status: <code><%= dbStatus %></code></p>
+
+    <table>
+      <thead>
+        <tr><th>Method</th><th>Route</th><th>Purpose</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>POST</td><td><code>/api/auth/signup</code></td><td>Register a new user</td></tr>
+        <tr><td>POST</td><td><code>/api/auth/login</code></td><td>Login &amp; get JWT</td></tr>
+        <tr><td>GET</td><td><code>/api/events</code></td><td>List all events</td></tr>
+        <tr><td>GET</td><td><code>/api/events/:id</code></td><td>Get one event</td></tr>
+        <tr><td>POST</td><td><code>/api/events</code></td><td>Create event (admin)</td></tr>
+        <tr><td>PUT</td><td><code>/api/events/:id</code></td><td>Update event (admin)</td></tr>
+        <tr><td>DELETE</td><td><code>/api/events/:id</code></td><td>Delete event (admin)</td></tr>
+        <tr><td>POST</td><td><code>/api/registrations</code></td><td>Register for event</td></tr>
+        <tr><td>GET</td><td><code>/api/registrations/my</code></td><td>My registrations</td></tr>
+        <tr><td>GET</td><td><code>/api/registrations</code></td><td>All registrations</td></tr>
+        <tr><td>DELETE</td><td><code>/api/registrations/:id</code></td><td>Cancel registration</td></tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
